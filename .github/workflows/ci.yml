@@ -16,6 +16,6 @@ jobs:
       - name: Check out the repository
         uses: actions/checkout@v7
       - name: Install Mise toolchains
-        uses: jdx/mise-action@v3
+        uses: jdx/mise-action@v4
       - name: Run the canonical CI task
         run: mise run ci
