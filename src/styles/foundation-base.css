@@ -1,0 +1,150 @@
+:root {
+  --ink: #13232d;
+  --muted: #5b6870;
+  --paper: #f6f1e7;
+  --panel: #fffdf8;
+  --line: #d7d0c5;
+  --blue: #177e89;
+  --orange: #d96832;
+  --red: #a53b33;
+  --green: #3b7a57;
+  --yellow: #b68319;
+  --violet: #665aa8;
+  --shadow: 0 12px 34px rgba(19, 35, 45, 0.09);
+  --radius: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font:
+    16px/1.58 ui-sans-serif,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+a {
+  color: #096874;
+  text-underline-offset: 3px;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.skip {
+  position: fixed;
+  left: 1rem;
+  top: -5rem;
+  z-index: 30;
+  background: var(--ink);
+  color: white;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+}
+
+.skip:focus {
+  top: 1rem;
+}
+
+:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 3px;
+}
+
+.top {
+  border-bottom: 1px solid var(--line);
+  background: rgba(246, 241, 231, 0.96);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(12px);
+}
+
+.topin {
+  max-width: 1280px;
+  margin: auto;
+  padding: 0.7rem 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brand {
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.topnav {
+  display: flex;
+  gap: 0.9rem;
+  margin-left: auto;
+  font-size: 0.9rem;
+}
+
+.layout {
+  max-width: 1280px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 230px minmax(0, 1fr);
+  gap: 2.4rem;
+  padding: 2rem 1.2rem 5rem;
+}
+
+.side {
+  position: sticky;
+  top: 4.6rem;
+  align-self: start;
+  max-height: calc(100vh - 6rem);
+  overflow: auto;
+}
+
+.side a {
+  display: block;
+  color: var(--muted);
+  padding: 0.3rem 0.6rem;
+  border-left: 2px solid transparent;
+  text-decoration: none;
+  font-size: 0.88rem;
+}
+
+.side a.active {
+  color: var(--ink);
+  border-color: var(--orange);
+  font-weight: 700;
+}
+
+.searchbox {
+  display: grid;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.searchbox input {
+  width: 100%;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  padding: 0.55rem 0.65rem;
+  border-radius: 8px;
+}
+
+.result-count {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+main {
+  min-width: 0;
+}

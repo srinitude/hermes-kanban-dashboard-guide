@@ -1,0 +1,81 @@
+.hero {
+  padding: 1.2rem 0 2.2rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(260px, 0.7fr);
+  gap: 2rem;
+  align-items: end;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--orange);
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+h1 {
+  font:
+    800 clamp(2.4rem, 6vw, 5.5rem)/0.95 ui-serif,
+    Georgia,
+    serif;
+  letter-spacing: -0.045em;
+  margin: 0.55rem 0 1rem;
+  max-width: 780px;
+}
+
+h2 {
+  font:
+    800 clamp(1.7rem, 3vw, 2.6rem)/1.08 ui-serif,
+    Georgia,
+    serif;
+  margin: 0 0 1rem;
+  letter-spacing: -0.025em;
+}
+
+h3 {
+  font-size: 1.08rem;
+  margin: 1.5rem 0 0.55rem;
+}
+
+p {
+  margin: 0.45rem 0 1rem;
+}
+
+.lede {
+  font-size: 1.18rem;
+  max-width: 680px;
+}
+
+.hero-note {
+  border-left: 4px solid var(--blue);
+  padding: 0.9rem 1.1rem;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.command {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  background: var(--ink);
+  color: #f8fbfc;
+  border-radius: 10px;
+  padding: 0.72rem 0.8rem;
+  margin: 0.8rem 0;
+}
+
+.command code {
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.copy {
+  margin-left: auto;
+  border: 1px solid #7e9099;
+  color: white;
+  background: transparent;
+  border-radius: 6px;
+  padding: 0.34rem 0.58rem;
+  cursor: pointer;
+}

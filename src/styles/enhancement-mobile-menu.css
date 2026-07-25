@@ -1,0 +1,106 @@
+.copy,
+#clear-search,
+.mobile-panel button {
+  min-width: var(--touch);
+  min-height: 44px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink);
+  padding: 0.55rem 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.copy:hover,
+#clear-search:hover,
+.mobile-panel button:hover {
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
+.command .copy {
+  color: #f8fbfc;
+  border-color: #7e9099;
+}
+
+.command .copy:hover {
+  color: #fff;
+  border-color: #fff;
+}
+
+.section details > summary {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+.mobile-menu summary,
+.mobile-links a,
+.topnav a,
+.side a,
+.backtop {
+  min-height: 44px;
+}
+
+.mobile-menu summary {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-weight: 800;
+}
+
+.mobile-menu[open] summary {
+  color: var(--orange);
+}
+
+.mobile-panel {
+  position: fixed;
+  inset-inline-end: 0.5rem;
+  top: calc(env(safe-area-inset-top) + 5.75rem);
+  z-index: 30;
+  width: min(24rem, calc(100vw - 1rem));
+  max-height: calc(
+    100dvh - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 6.25rem
+  );
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 1rem;
+  padding-bottom: calc(1rem + env(safe-area-inset-bottom));
+  background: var(--panel);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.mobile-panel label {
+  display: block;
+  font-weight: 800;
+  margin-bottom: 0.3rem;
+}
+
+.mobile-panel input {
+  width: 100%;
+  min-height: 44px;
+  padding: 0.7rem;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.mobile-links {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.15rem;
+  margin: 0.6rem 0;
+}
+
+.mobile-links a {
+  display: flex;
+  align-items: center;
+  padding: 0.55rem;
+  color: var(--ink);
+}
+
+.result-count {
+  display: block;
+  margin-top: 0.35rem;
+}

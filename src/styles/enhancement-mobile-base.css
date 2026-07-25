@@ -1,0 +1,89 @@
+:root {
+  --orange: #b84d22;
+  --space-page: clamp(1rem, 3vw, 1.5rem);
+  --touch: 44px;
+}
+
+.topin {
+  position: relative;
+  padding: 0.55rem var(--space-page);
+  min-height: 3.6rem;
+}
+
+.topnav {
+  display: none;
+}
+
+.mobile-menu {
+  display: block;
+  margin-inline-start: auto;
+}
+
+.layout {
+  display: block;
+  max-width: 78rem;
+  padding: 1rem var(--space-page) 5rem;
+}
+
+.side {
+  display: none;
+}
+
+.hero {
+  padding: 0.75rem 0 1.5rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.hero > div {
+  min-width: 0;
+}
+
+.hero-note {
+  min-width: 0;
+  margin: 0;
+  padding: 1rem;
+}
+
+h1 {
+  font-size: clamp(2.35rem, 12vw, 3.45rem);
+  line-height: 0.96;
+  max-width: 16ch;
+  letter-spacing: -0.035em;
+}
+
+.lede {
+  font-size: clamp(1rem, 0.94rem + 0.45vw, 1.17rem);
+}
+
+.grid2,
+.feature-grid {
+  grid-template-columns: 1fr;
+}
+
+.section {
+  padding: clamp(2.2rem, 7vw, 4rem) 0;
+}
+
+.command {
+  min-width: 0;
+  max-width: 100%;
+  min-height: var(--touch);
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.command code {
+  min-width: 0;
+  flex: 1 1 auto;
+  overflow: auto;
+  overflow-wrap: anywhere;
+}
+
+.copy {
+  flex: 0 0 auto;
+  align-self: stretch;
+  margin-inline-start: auto;
+}

@@ -1,0 +1,132 @@
+.board-demo {
+  overflow: auto;
+  padding: 1rem 0;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(9, minmax(145px, 1fr));
+  gap: 0.55rem;
+  min-width: 1420px;
+}
+
+.col {
+  background: #ebe6dc;
+  border: 1px solid var(--line);
+  border-top: 5px solid var(--c);
+  border-radius: 9px;
+  min-height: 180px;
+  padding: 0.55rem;
+}
+
+.col b {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.mini {
+  background: var(--panel);
+  border: 1px solid #cfc8bc;
+  border-radius: 7px;
+  padding: 0.55rem;
+  margin-top: 0.55rem;
+  font-size: 0.75rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.mini small {
+  display: block;
+  color: var(--muted);
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.legend span {
+  border-bottom: 3px solid var(--c);
+  padding: 0.2rem;
+}
+
+.tablewrap {
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--panel);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 720px;
+}
+
+th,
+td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--line);
+}
+
+th {
+  background: #eee8dd;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+tr:last-child td {
+  border: 0;
+}
+
+.ui-label {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.88em;
+  background: #ebe7df;
+  border: 1px solid #d3ccc1;
+  padding: 0.08rem 0.3rem;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.3rem;
+}
+
+.plain-list {
+  padding-left: 1.15rem;
+}
+
+.plain-list li {
+  margin: 0.42rem 0;
+}
+
+.flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 1rem 0;
+}
+
+.flow span {
+  padding: 0.45rem 0.65rem;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  border-radius: 7px;
+}
+
+.flow i {
+  font-style: normal;
+  color: var(--muted);
+}

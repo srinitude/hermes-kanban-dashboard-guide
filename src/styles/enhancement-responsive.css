@@ -1,0 +1,133 @@
+@media (min-width: 40rem) {
+  .feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .mobile-links {
+    grid-template-columns: 1fr 1fr;
+  }
+  .route-strip {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    overflow: visible;
+  }
+  .route-strip a {
+    min-width: 0;
+  }
+  .board {
+    grid-auto-columns: min(46vw, 17rem);
+  }
+}
+
+@media (min-width: 52rem) {
+  .hero {
+    grid-template-columns: minmax(0, 1.45fr) minmax(16rem, 0.65fr);
+    gap: 2rem;
+  }
+  .grid2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  html.js .tablewrap {
+    overflow: auto;
+    border: 1px solid var(--line);
+    background: var(--panel);
+  }
+  html.js table {
+    display: table;
+    min-width: 640px;
+  }
+  html.js thead {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip-path: none;
+  }
+  html.js tbody {
+    display: table-row-group;
+  }
+  html.js tr {
+    display: table-row;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+  html.js td {
+    display: table-cell;
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--line);
+  }
+  html.js td::before {
+    content: none;
+  }
+}
+
+@media (min-width: 64rem) {
+  .topnav {
+    display: flex;
+  }
+  .mobile-menu {
+    display: none;
+  }
+  .layout {
+    display: grid;
+    grid-template-columns: 14rem minmax(0, 1fr);
+    gap: 2rem;
+    padding-top: 2rem;
+  }
+  .side {
+    display: block;
+    position: sticky;
+    top: 4.6rem;
+  }
+  .side a {
+    display: flex;
+    align-items: center;
+  }
+  .feature-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .board {
+    min-width: 1420px;
+    grid-template-columns: repeat(9, 1fr);
+    grid-auto-flow: row;
+    grid-auto-columns: auto;
+  }
+}
+
+@media (min-width: 76rem) {
+  .layout {
+    grid-template-columns: 15rem minmax(0, 1fr);
+    gap: 2.5rem;
+  }
+  h1 {
+    font-size: clamp(3.2rem, 5.1vw, 4.75rem);
+    max-width: 14ch;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --orange: #e7753e;
+  }
+  a {
+    color: #61cbd4;
+  }
+  .route-strip a,
+  .mobile-links a {
+    color: var(--ink);
+  }
+  .copy,
+  #clear-search,
+  .mobile-panel button {
+    background: #172329;
+  }
+  .runtime-note {
+    background: #221f35;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .progress-fill {
+    transition: none;
+  }
+}

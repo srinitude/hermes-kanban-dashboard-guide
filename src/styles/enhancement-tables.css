@@ -1,0 +1,51 @@
+html.js .tablewrap {
+  overflow: visible;
+  border: 0;
+  background: transparent;
+}
+
+html.js table {
+  display: block;
+  min-width: 0;
+}
+
+html.js thead {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
+html.js tbody {
+  display: grid;
+  gap: 0.75rem;
+}
+
+html.js tr {
+  display: grid;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+
+html.js td {
+  display: grid;
+  grid-template-columns: minmax(7.5rem, 35%) minmax(0, 1fr);
+  gap: 0.75rem;
+  padding: 0.7rem 0.8rem;
+  border-bottom: 1px solid var(--line);
+}
+
+html.js td:last-child {
+  border-bottom: 0;
+}
+
+html.js td::before {
+  content: attr(data-label);
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}

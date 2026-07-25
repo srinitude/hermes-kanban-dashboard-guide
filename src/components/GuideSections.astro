@@ -1,0 +1,35 @@
+---
+import boardMap from "../content/sections/board-map.html?raw";
+import boards from "../content/sections/boards.html?raw";
+import cards from "../content/sections/cards.html?raw";
+import columns from "../content/sections/columns.html?raw";
+import createTask from "../content/sections/create-task.html?raw";
+import diagnostics from "../content/sections/diagnostics.html?raw";
+import featureIndex from "../content/sections/feature-index.html?raw";
+import filters from "../content/sections/filters.html?raw";
+import moveSelect from "../content/sections/move-select.html?raw";
+import orchestration from "../content/sections/orchestration.html?raw";
+import quickStart from "../content/sections/quick-start.html?raw";
+import recipes from "../content/sections/recipes.html?raw";
+import taskDrawer from "../content/sections/task-drawer.html?raw";
+import troubleshooting from "../content/sections/troubleshooting.html?raw";
+
+const sections = [
+  quickStart,
+  boardMap,
+  columns,
+  boards,
+  createTask,
+  cards,
+  moveSelect,
+  filters,
+  taskDrawer,
+  diagnostics,
+  orchestration,
+  recipes,
+  troubleshooting,
+  featureIndex,
+];
+---
+
+{sections.map((section) => <Fragment set:html={section} />)}

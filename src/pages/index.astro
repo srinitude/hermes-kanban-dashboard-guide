@@ -1,0 +1,25 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import GuideFooter from "../components/GuideFooter.astro";
+import GuideSections from "../components/GuideSections.astro";
+import Hero from "../components/Hero.astro";
+import NoResults from "../components/NoResults.astro";
+import Sidebar from "../components/Sidebar.astro";
+import TopBar from "../components/TopBar.astro";
+---
+
+<BaseLayout
+  title="Hermes Kanban Dashboard Guide"
+  description="A complete visual guide to the Hermes Kanban dashboard."
+>
+  <TopBar />
+  <div class="layout">
+    <Sidebar />
+    <main id="content">
+      <Hero />
+      <GuideSections />
+      <NoResults />
+      <GuideFooter />
+    </main>
+  </div>
+</BaseLayout>

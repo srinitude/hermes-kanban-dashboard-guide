@@ -1,0 +1,118 @@
+.route-strip {
+  display: flex;
+  gap: 0.55rem;
+  margin: 0.85rem 0 1.1rem;
+  padding-bottom: 0.35rem;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  scrollbar-width: thin;
+}
+
+.route-strip a {
+  display: grid;
+  flex: 0 0 min(76vw, 16rem);
+  min-height: var(--touch);
+  gap: 0.08rem;
+  padding: 0.65rem 0.75rem;
+  color: var(--ink);
+  text-decoration: none;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  scroll-snap-align: start;
+}
+
+.route-strip a:hover {
+  border-color: var(--blue);
+}
+
+.route-strip b {
+  font-size: 0.88rem;
+}
+
+.route-strip small {
+  color: var(--muted);
+  font-size: 0.74rem;
+}
+
+.route-strip .route-no {
+  color: var(--orange);
+  font:
+    800 0.68rem/1 ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    monospace;
+  letter-spacing: 0.08em;
+}
+
+.progress-meter {
+  margin: 0.7rem 0 0.55rem;
+  padding: 0.7rem;
+  border-block: 1px solid var(--line);
+}
+
+.progress-meter strong {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+}
+
+.progress-meter span {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.progress-track {
+  height: 4px;
+  margin-top: 0.5rem;
+  background: var(--line);
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0;
+  background: var(--orange);
+  transition: width 0.2s ease;
+}
+
+.checkline {
+  min-height: 44px;
+}
+
+.checkline input {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex: 0 0 1.5rem;
+  margin-top: 0.12rem;
+  accent-color: var(--orange);
+}
+
+.runtime-note {
+  margin: 1rem 0 0;
+  padding: 0.8rem 1rem;
+  border-inline-start: 3px solid var(--violet);
+  background: color-mix(in srgb, var(--panel) 84%, var(--violet) 16%);
+  font-size: 0.9rem;
+}
+
+.board-demo {
+  scroll-snap-type: x proximity;
+  overscroll-behavior-inline: contain;
+}
+
+.board {
+  min-width: 0;
+  grid-template-columns: none;
+  grid-auto-flow: column;
+  grid-auto-columns: min(78vw, 16rem);
+}
+
+.col {
+  scroll-snap-align: start;
+}
+
+.board-demo .col:last-child {
+  outline: 1px dashed var(--muted);
+  outline-offset: -1px;
+}

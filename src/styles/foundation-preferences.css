@@ -1,0 +1,65 @@
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #ecf4f5;
+    --muted: #b1bdc2;
+    --paper: #10181c;
+    --panel: #172329;
+    --line: #33434b;
+    --shadow: none;
+  }
+  .top {
+    background: rgba(16, 24, 28, 0.96);
+  }
+  .command {
+    background: #071014;
+  }
+  .callout {
+    background: #36251c;
+    color: #ffe7d8;
+  }
+  .danger {
+    background: #351f20;
+  }
+  .good {
+    background: #183025;
+    color: #ccead5;
+  }
+  .col {
+    background: #1d2a30;
+  }
+  .mini {
+    border-color: #425159;
+  }
+  .tablewrap {
+    background: var(--panel);
+  }
+  th {
+    background: #202e34;
+  }
+  .ui-label {
+    background: #27343a;
+    border-color: #425159;
+  }
+  .kbd {
+    background: #27343a;
+  }
+  .error {
+    color: #ffaaa0;
+  }
+  .critical {
+    color: #ff9bb9;
+  }
+  .warning {
+    color: #ffd074;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
