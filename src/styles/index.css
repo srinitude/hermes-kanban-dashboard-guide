@@ -9,3 +9,9 @@
 @import "./enhancement-guidance.css";
 @import "./enhancement-tables.css";
 @import "./enhancement-responsive.css";
+@import "./editorial-foundation.css";
+@import "./editorial-components.css";
+@import "./editorial-responsive.css";
+@import "./manual-shell.css";
+@import "./manual-content.css";
+@import "./manual-desktop.css";

@@ -1,6 +1,6 @@
 .section {
   padding: 2.8rem 0;
-  border-top: 1px solid var(--line);
+  border-top: var(--hairline);
 }
 
 .section[hidden] {
@@ -13,11 +13,12 @@
 }
 
 .callout {
-  border-left: 4px solid var(--orange);
-  background: #fff5ed;
+  border: 2px solid var(--line);
+  border-left-width: 0.55rem;
+  background: #fff8d6;
   padding: 0.9rem 1rem;
   margin: 1rem 0;
-  color: #542817;
+  color: var(--ink);
 }
 
 .danger {
@@ -51,8 +52,11 @@
   place-items: center;
   width: 2.1rem;
   height: 2.1rem;
-  border: 2px solid var(--orange);
-  border-radius: 50%;
+  border: 2px solid var(--line);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: var(--accent);
   font-weight: 800;
 }
 

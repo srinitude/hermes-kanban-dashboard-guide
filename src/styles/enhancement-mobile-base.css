@@ -1,5 +1,4 @@
 :root {
-  --orange: #b84d22;
   --space-page: clamp(1rem, 3vw, 1.5rem);
   --touch: 44px;
 }

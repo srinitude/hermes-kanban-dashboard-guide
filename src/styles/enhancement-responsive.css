@@ -64,24 +64,43 @@
 @media (min-width: 64rem) {
   .topnav {
     display: flex;
+    gap: 0.55rem;
+  }
+
+  .topnav a {
+    display: flex;
+    align-items: center;
+    border: 2px solid var(--line);
+    background: var(--panel);
+    color: var(--ink);
+    padding: 0.35rem 0.55rem;
+    text-decoration: none;
+  }
+
+  .topnav a:first-child {
+    background: transparent;
+    color: var(--accent);
+    box-shadow: none;
   }
   .mobile-menu {
     display: none;
   }
   .layout {
     display: grid;
-    grid-template-columns: 14rem minmax(0, 1fr);
-    gap: 2rem;
+    grid-template-columns: minmax(14rem, 16rem) minmax(0, 1fr);
+    gap: 2.5rem;
     padding-top: 2rem;
   }
   .side {
     display: block;
     position: sticky;
-    top: 4.6rem;
-  }
-  .side a {
-    display: flex;
-    align-items: center;
+    top: 4.8rem;
+    align-self: start;
+    max-height: calc(100vh - 6.2rem);
+    overflow: auto;
+    border: 2px solid var(--line);
+    background: var(--panel);
+    padding: 0.8rem;
   }
   .feature-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -106,9 +125,6 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --orange: #e7753e;
-  }
   a {
     color: #61cbd4;
   }

@@ -1,0 +1,144 @@
+@media (min-width: 64rem) {
+  body {
+    padding-bottom: 0;
+  }
+
+  .top,
+  .page-turner {
+    display: none;
+  }
+
+  .layout {
+    display: grid;
+    grid-template-columns: var(--manual-rail) minmax(0, 1fr);
+    gap: 0;
+    max-width: var(--sheet-width);
+    min-height: 100vh;
+    padding: 0;
+    border-inline: var(--hairline);
+  }
+
+  .manual-rail {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    max-height: none;
+    padding: 2.25rem 1.25rem;
+    overflow: auto;
+    border: 0;
+    border-right: var(--hairline);
+    background: transparent;
+  }
+
+  .manual-rail::before {
+    order: 0;
+    margin: 0 0 1.75rem 0.5rem;
+    content: "MANUAL";
+    font-size: 1rem;
+    letter-spacing: 0.35em;
+  }
+
+  #side-nav {
+    order: 1;
+    counter-reset: manual-section;
+  }
+
+  #side-nav a {
+    position: relative;
+    min-height: 0;
+    padding: 0.42rem 0.5rem;
+    border-top: var(--hairline);
+    border-left: 0;
+    font-size: 0.76rem;
+  }
+
+  #side-nav a::before {
+    counter-increment: manual-section;
+    content: counter(manual-section) ".";
+    display: inline-block;
+    width: 2rem;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+  }
+
+  #side-nav a.active::after {
+    position: absolute;
+    top: 0.4rem;
+    bottom: 0.4rem;
+    left: -1.25rem;
+    width: 2px;
+    background: var(--accent);
+    content: "";
+  }
+
+  .searchbox {
+    order: 2;
+    margin: 1.75rem 0 0;
+    padding-top: 1rem;
+    border-top: var(--hairline);
+  }
+
+  main {
+    max-width: none;
+    padding: 3rem clamp(3rem, 6vw, 5.5rem) 5rem;
+  }
+
+  .manual-sheet {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 1rem 0 5rem;
+  }
+
+  .manual-sheet h1 {
+    max-width: 34ch;
+    font-size: 1.8rem;
+  }
+
+  .manual-sheet > div {
+    max-width: var(--reading-measure);
+  }
+
+  .margin-note {
+    margin-left: auto;
+    max-width: 18rem;
+  }
+
+  .footer::after {
+    display: block;
+    margin-top: 2.5rem;
+    content: "—  118  —";
+    text-align: center;
+    letter-spacing: 0.16em;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #2f2c28;
+    --muted: #6b665f;
+    --paper: #f3efe6;
+    --panel: #ece5d9;
+    --line: #d3ccbe;
+    --accent: #9b4e2b;
+    --paper-grain: radial-gradient(
+      rgba(47, 44, 40, 0.04) 0.6px,
+      transparent 0.8px
+    );
+  }
+
+  .top,
+  .command,
+  .callout,
+  .col,
+  .mini,
+  .tablewrap,
+  th,
+  .ui-label,
+  .kbd,
+  .good {
+    border-color: var(--line);
+    background: var(--panel);
+    color: var(--ink);
+  }
+}

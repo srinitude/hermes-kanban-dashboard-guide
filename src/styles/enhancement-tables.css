@@ -24,9 +24,9 @@ html.js tbody {
 
 html.js tr {
   display: grid;
-  border: 1px solid var(--line);
+  border: 2px solid var(--line);
   background: var(--panel);
-  box-shadow: var(--shadow);
+  box-shadow: 3px 3px 0 var(--line);
 }
 
 html.js td {

@@ -1,0 +1,91 @@
+@media (min-width: 40rem) {
+  .route-strip {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    overflow: visible;
+  }
+
+  .route-strip a {
+    min-width: 0;
+  }
+}
+
+@media (min-width: 52rem) {
+  .hero {
+    grid-template-columns: minmax(0, 1.45fr) minmax(15rem, 0.65fr);
+    gap: 3rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  .topnav {
+    display: flex;
+    gap: 1.25rem;
+  }
+
+  .topnav a {
+    border: 0;
+    border-bottom: var(--hairline);
+    background: transparent;
+    box-shadow: none;
+    color: var(--ink);
+    padding: 0.4rem 0;
+  }
+
+  .topnav a:first-child {
+    border-color: var(--accent);
+    background: transparent;
+    box-shadow: none;
+    color: var(--accent);
+  }
+
+  .layout {
+    grid-template-columns: 15rem minmax(0, 56rem);
+    gap: clamp(3rem, 6vw, 6rem);
+    padding-top: 2.5rem;
+  }
+
+  .side {
+    top: 5.25rem;
+    border: 0;
+    border-right: var(--hairline);
+    background: transparent;
+    padding: 0 1.5rem 0 0;
+    letter-spacing: 0.02em;
+  }
+
+  .side a {
+    min-height: 44px;
+    padding: 0.5rem 0.65rem;
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 4vw, 3.25rem);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .top {
+    background: rgba(29, 27, 24, 0.96);
+  }
+
+  .command,
+  .mobile-panel,
+  .mobile-panel input,
+  .copy,
+  #clear-search,
+  .mobile-panel button {
+    color: var(--ink);
+  }
+}
+
+@media (forced-colors: active) {
+  :root {
+    --paper-grain: none;
+  }
+
+  .route-strip a:first-child,
+  .side a.active {
+    border: 2px solid LinkText;
+  }
+}

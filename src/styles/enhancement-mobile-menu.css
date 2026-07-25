@@ -3,8 +3,8 @@
 .mobile-panel button {
   min-width: var(--touch);
   min-height: 44px;
-  border: 1px solid var(--line);
-  background: transparent;
+  border: 2px solid var(--line);
+  background: var(--panel);
   color: var(--ink);
   padding: 0.55rem 0.75rem;
   font-weight: 700;
@@ -19,13 +19,13 @@
 }
 
 .command .copy {
-  color: #f8fbfc;
-  border-color: #7e9099;
+  color: var(--ink);
+  border-color: var(--line);
 }
 
 .command .copy:hover {
-  color: #fff;
-  border-color: #fff;
+  color: var(--ink);
+  border-color: var(--blue);
 }
 
 .section details > summary {
@@ -47,10 +47,16 @@
   display: flex;
   align-items: center;
   font-weight: 800;
+  border: var(--hairline);
+  background: var(--panel);
+  box-shadow: none;
+  padding: 0.45rem 0.65rem;
 }
 
 .mobile-menu[open] summary {
-  color: var(--orange);
+  color: var(--accent);
+  background: transparent;
+  box-shadow: none;
 }
 
 .mobile-panel {
@@ -67,8 +73,8 @@
   padding: 1rem;
   padding-bottom: calc(1rem + env(safe-area-inset-bottom));
   background: var(--panel);
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow);
+  border: var(--hairline);
+  box-shadow: none;
 }
 
 .mobile-panel label {
@@ -81,8 +87,8 @@
   width: 100%;
   min-height: 44px;
   padding: 0.7rem;
-  border: 1px solid var(--line);
-  background: var(--paper);
+  border: 2px solid var(--line);
+  background: var(--panel);
   color: var(--ink);
 }
 

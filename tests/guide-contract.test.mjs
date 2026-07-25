@@ -109,3 +109,62 @@ test("build prefixes generated assets for GitHub Pages", () => {
   assert.ok(generated.length > 0);
   assert.ok(generated.every((path) => path.startsWith(base)));
 });
+
+test("build uses the mobile-first editorial field-manual visual system", () => {
+  const html = builtHtml();
+  const css = `${inlineText(html, "style")}\n${localAssetText(html, "href")}`;
+
+  for (const token of ["--accent:", "--hairline:", "--paper-grain:"]) {
+    assert.match(css, new RegExp(token));
+  }
+
+  assert.doesNotMatch(css, /--(?:hard-shadow|orange):/);
+  assert.match(css, /\.route-strip a:first-child\{[^}]*var\(--accent\)/);
+
+  const wideStart = css.search(
+    /@media\s*\((?:min-width:\s*64rem|width\s*>=\s*64rem)\)/,
+  );
+  assert.ok(wideStart > 0, "desktop enhancement must start at 64rem");
+  const mobileCss = css.slice(0, wideStart);
+  assert.match(mobileCss, /\.layout\{[^}]*display:\s*block/);
+  assert.doesNotMatch(mobileCss, /\.layout\{[^}]*display:\s*grid/);
+});
+
+test("build uses the reference manual composition", () => {
+  const html = builtHtml();
+  const css = `${inlineText(html, "style")}\n${localAssetText(html, "href")}`;
+
+  for (const token of [
+    'class="topnav folio-nav"',
+    'class="side manual-rail"',
+    'class="hero manual-sheet"',
+    'class="command code-plate"',
+    'class="hero-note margin-note"',
+    'class="page-turner"',
+  ]) {
+    assert.match(html, new RegExp(token));
+  }
+
+  assert.equal((html.match(/data-folio="0[2-5]"/g) ?? []).length, 4);
+  assert.match(html, /name="color-scheme" content="light"/);
+  assert.match(css, /--manual-rail:/);
+  assert.match(css, /--reading-measure:/);
+  assert.match(css, /\.folio-nav/);
+  assert.match(css, /\.page-turner/);
+  assert.match(css, /\.manual-sheet/);
+});
+
+test("build keeps mobile manual chrome unobstructed", () => {
+  const html = builtHtml();
+  const css = `${inlineText(html, "style")}\n${localAssetText(html, "href")}`;
+  const shell = readFileSync(join(root, "src/styles/manual-shell.css"), "utf8");
+
+  assert.match(css, /\.brand\{[^}]*white-space:\s*nowrap/);
+  assert.match(css, /\.mobile-menu\{[^}]*position:\s*absolute/);
+  assert.match(css, /\.page-turner\{[^}]*background:\s*var\(--paper\)/);
+  assert.match(
+    css,
+    /@media\s*\(prefers-color-scheme:\s*dark\)[\s\S]*--paper-grain:/,
+  );
+  assert.match(shell, /body\s*\{[^}]*background-color:\s*var\(--paper\)/s);
+});

@@ -1,10 +1,18 @@
 @media (prefers-color-scheme: dark) {
   :root {
-    --ink: #ecf4f5;
-    --muted: #b1bdc2;
-    --paper: #10181c;
-    --panel: #172329;
-    --line: #33434b;
+    --ink: #eee7da;
+    --muted: #c0b7a8;
+    --paper: #1d1b18;
+    --panel: #29251f;
+    --line: #514b42;
+    --blue: #e39a72;
+
+    --red: #ffaaa0;
+    --green: #8bcaa0;
+    --yellow: #e0c178;
+    --accent: #e39a72;
+    --hairline: 1px solid var(--line);
+    --paper-grain: none;
     --shadow: none;
   }
   .top {
@@ -14,8 +22,8 @@
     background: #071014;
   }
   .callout {
-    background: #36251c;
-    color: #ffe7d8;
+    background: #2d2918;
+    color: var(--ink);
   }
   .danger {
     background: #351f20;

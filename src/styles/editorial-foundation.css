@@ -1,0 +1,171 @@
+body {
+  background-color: var(--paper);
+  background-image: var(--paper-grain);
+  background-size: 4px 4px;
+  font-family:
+    Iowan Old Style,
+    Palatino Linotype,
+    Book Antiqua,
+    Georgia,
+    serif;
+  font-size: 1rem;
+  line-height: 1.62;
+}
+
+.top {
+  border-bottom: var(--hairline);
+  background: rgba(243, 239, 230, 0.96);
+  backdrop-filter: blur(8px);
+}
+
+.topin {
+  max-width: 78rem;
+  min-height: 4rem;
+  padding: 0.7rem var(--space-page);
+}
+
+.brand {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+}
+
+.layout {
+  max-width: 78rem;
+  padding: 1.5rem var(--space-page) 5rem;
+}
+
+main {
+  width: 100%;
+  max-width: 56rem;
+}
+
+.eyebrow,
+.route-no,
+th,
+.tag,
+.topnav,
+.side {
+  font-family:
+    Iowan Old Style,
+    Palatino Linotype,
+    Book Antiqua,
+    Georgia,
+    serif;
+  letter-spacing: 0.12em;
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+h1,
+h2,
+h3 {
+  font-family:
+    Iowan Old Style,
+    Palatino Linotype,
+    Book Antiqua,
+    Georgia,
+    serif;
+  font-weight: 500;
+}
+
+h1 {
+  max-width: 18ch;
+  font-size: clamp(2.15rem, 10vw, 3rem);
+  line-height: 1.04;
+  letter-spacing: 0.08em;
+}
+
+h2 {
+  font-size: clamp(1.6rem, 5vw, 2.15rem);
+  line-height: 1.14;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 1.12rem;
+  letter-spacing: 0.02em;
+}
+
+.lede,
+.intro {
+  max-width: 42rem;
+}
+
+.hero {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.5rem;
+  padding: 1.25rem 0 2.25rem;
+}
+
+.hero-note {
+  border: 0;
+  border-top: var(--hairline);
+  background: transparent;
+  box-shadow: none;
+  padding: 1rem 0 0;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.command {
+  border: var(--hairline);
+  border-radius: 0;
+  background: var(--panel);
+  color: var(--ink);
+  padding: 0;
+}
+
+.command code {
+  padding: 0.72rem 0.8rem;
+}
+
+.copy,
+#clear-search,
+.mobile-panel button {
+  border: 0;
+  border-left: var(--hairline);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: var(--ink);
+  letter-spacing: 0.05em;
+}
+
+.copy:hover,
+#clear-search:hover,
+.mobile-panel button:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.section {
+  border-top: var(--hairline);
+  padding: clamp(2.8rem, 8vw, 5rem) 0;
+}
+
+.callout,
+.runtime-note {
+  border: 0;
+  border-left: 2px solid var(--accent);
+  background: transparent;
+  color: var(--ink);
+  padding: 0.3rem 0 0.3rem 1rem;
+}
+
+.step:before {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: var(--accent);
+}
